@@ -1,2 +1,12 @@
 # aposteJa
 Sistema web de apostas esportivas desenvolvido para disciplina de Desenvolvimento de Aplicações Web
+
+## Paginas
+- Home (João Vitor)
+- Pesquisa de Jogos (João Vitor)
+- Detalhe do Jogo (Samuel)  
+- Registro de aposta (Samuel)  
+- Login (Samuel)  
+- Cadastro  (João Pedro)  
+- Minha conta (João Pedro)  
+- Minhas apostas (João Pedro)
