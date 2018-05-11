@@ -1,0 +1,30 @@
+.ui.cards{
+    padding: 200px;
+}
+
+#imagem_card_casa{
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+} 
+
+#imagem_card_fora{
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}  
+
+#nome_times{
+    display: flex;
+    align-content: space-between;    
+}
+
+#nome_time_fora{
+    padding-left: 10px;
+}
+
+
+
+
+
