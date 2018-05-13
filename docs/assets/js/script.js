@@ -15,7 +15,7 @@ const Script = {
     _loadTemplates: function _loadTemplates(){
         Script.TEMPLATE_HEADER_SEM_LOGIN = 
         '<div class="ui green three inverted menu" id="top-menu">' +
-            '<a class="item">Aposte Já</a>' +
+            '<a href="index.html" class="item">Aposte Já</a>' +
             '<div class="right menu">' +
                 '<a href="' + Script.LOGIN_PAGE + '" class="item">Login</a>' +
                 '<a href="' + Script.REGISTER_PAGE + '" class="item">Registrar</a>' + 
@@ -23,7 +23,7 @@ const Script = {
         '</div>';
         Script.TEMPLATE_HEADER_COM_LOGIN = 
         '<div class="ui green three inverted menu" id="top-menu">' +
-            '<a class="item">Aposte Já</a>' +
+            '<a href="index.html" class="item">Aposte Já</a>' +
             '<div class="right menu">' +
                 '<a href="' + Script.APOSTAS_PAGE + '" class="item">Apostas</a>' +
                 '<a href="' + Script.CONTA_PAGE + '" class="item">Conta</a>' + 
@@ -31,7 +31,7 @@ const Script = {
         '</div>';
         Script.TEMPLATE_HEADER_ADMIN = 
         '<div class="ui green three inverted menu" id="top-menu">'+
-            '<a class="item">Aposte Já</a>'+
+            '<a href="index.html" class="item">Aposte Já</a>'+
             '<a class="item" id="open-menu"><i class="bars icon"></i></a>'+
             '<div class="right menu">'+
                 '<a class="item">Sair</a>'+
