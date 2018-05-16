@@ -16,12 +16,21 @@
 }  
 
 #nome_times{
-    display: flex;
-    align-content: space-between;    
+    display: inline-flex;
+    align-content: space-around;    
 }
 
 #nome_time_fora{
-    padding-left: 10px;
+    padding-right: 30px;
+}
+
+#nome_time_casa{
+    padding-right: 135px;
+}
+
+#icons{
+    display:block;
+    align-items:center;
 }
 
 
