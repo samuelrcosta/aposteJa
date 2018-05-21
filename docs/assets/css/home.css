@@ -2,6 +2,11 @@
     padding: 200px;
 }
 
+#bandeiras{
+    display: flex;
+    justify-content: flex-start;
+}
+
 #imagem_card_casa{
     margin-left: 10px;
     margin-right: 30px;
