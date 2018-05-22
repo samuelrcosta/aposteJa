@@ -16,75 +16,135 @@
 
 <body>
   <div id="header"></div>
+  <div id="subtitulo">
+    Jogos mais populares
+  </div>
   <div class="ui cards">
     <div class="card">
       <div class="content">
         <div id = "bandeiras">
-          <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/bandeira_brasil.PNG">
-            X 
-          <img class="ui tiny image" id="imagem_card_fora" src="./assets/images/bandeira_brasil.PNG">
-        </div>  
-        <div id = "nome_times">
-            <div id = "nome_time_casa">
+          <div id = "time_casa">
+              <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/bandeira_brasil.PNG">
+              <div id = "nome_time_fora">
                 Brasil
               </div>
-              <div id = "nome_time_fora">
-                Alemanha
-              </div>
-        </div>
+          </div>
+            X 
+        <div id = "time_fora">
+              <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/bandeira_brasil.PNG">
+                <div id = "nome_time_fora">
+                  Alemanha
+                </div>
+          </div>
+        </div>  
         <div id ="icons">
-            <i class="calendar outline icon"></i>
-            <i class="map pin icon"></i>
-            <i class="clock outline icon"></i>
-            <i class="money bill alternate outline icon"></i>
+          <div id = "data_jogo">
+              <i class="calendar outline icon"></i>
+              27/05/2018
+          </div>
+          <div = "local_jogo">
+              <i class="map pin icon"></i>
+              Moscou, Russia
+          </div>
+          <div = "horario_jogo">
+              <i class="clock outline icon"></i>
+              13h
+          </div>
+          <div = "valor_jogo">
+              <i class="money bill alternate outline icon"></i>
+              R$ 2.00
+          </div>  
         </div>
       </div>
     </div>
-
     <div class="card">
-      <div class="content">
-        <img class="right floated mini ui image" src="/images/avatar/large/jenny.jpg">
-        <div class="header">
-          Jenny Hess
-        </div>
-        <div class="meta">
-          New Member
-        </div>
-        <div class="description">
-          Jenny wants to add you to the group
-          <b>best friends</b>
-        </div>
-      </div>
-      <div class="extra content">
-        <div class="ui two buttons">
-          <div class="ui basic green button">Approve</div>
-          <div class="ui basic red button">Decline</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="content">
-        <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
-        <div class="header">
-          Elliot Fu
-        </div>
-        <div class="meta">
-          Friends of Veronika
-        </div>
-        <div class="description">
-          Elliot requested permission to view your contact details
-        </div>
-      </div>
-      <div class="extra content">
-        <div class="ui two buttons">
-          <div class="ui basic green button">Approve</div>
-          <div class="ui basic red button">Decline</div>
+        <div class="content">
+          <div id = "bandeiras">
+            <div id = "time_casa">
+                <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/bandeira_brasil.PNG">
+                <div id = "nome_time_fora">
+                  Brasil
+                </div>
+            </div>
+              X 
+          <div id = "time_fora">
+                <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/bandeira_brasil.PNG">
+                  <div id = "nome_time_fora">
+                    Alemanha
+                  </div>
+            </div>
+          </div>
+          <div id ="icons">
+            <div id = "data_jogo">
+                <i class="calendar outline icon"></i>
+                27/05/2018
+            </div>
+            <div = "local_jogo">
+                <i class="map pin icon"></i>
+                Moscou, Russia
+            </div>
+            <div = "horario_jogo">
+                <i class="clock outline icon"></i>
+                13h
+            </div>
+            <div = "valor_jogo">
+                <i class="money bill alternate outline icon"></i>
+                R$ 2.00
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
+      <div class="card">
+          <div class="content">
+            <div id = "bandeiras">
+              <div id = "time_casa">
+                  <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/bandeira_brasil.PNG">
+                  <div id = "nome_time_fora">
+                    Brasil
+                  </div>
+              </div>
+                X 
+            <div id = "time_fora">
+                  <img class="ui tiny image" id="imagem_card_casa" src="./assets/images/bandeira_brasil.PNG">
+                    <div id = "nome_time_fora">
+                      Alemanha
+                    </div>
+              </div>
+            </div>  
+            <div id ="icons">
+              <div id = "data_jogo">
+                  <i class="calendar outline icon"></i>
+                  27/05/2018
+              </div>
+              <div = "local_jogo">
+                  <i class="map pin icon"></i>
+                  Moscou, Russia
+              </div>
+              <div = "horario_jogo">
+                  <i class="clock outline icon"></i>
+                  13h
+              </div>
+              <div = "valor_jogo">
+                  <i class="money bill alternate outline icon"></i>
+                  R$ 2.00
+              </div>
+            </div>
+          </div>
+        </div>
   </div>
+
+  <div id="pesquisa">
+      Quer encontrar mais jogos?
+    </div>
+
+  <div class="ui search">
+      <div class="ui icon input">
+        <input class="prompt" placeholder="Time, horário, valor da aposta" type="text">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+
   <script src="assets/js/script.js"></script>
   <script type="text/javascript">
       $(document).ready(function(){
