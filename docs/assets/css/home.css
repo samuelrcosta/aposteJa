@@ -1,39 +1,56 @@
+#subtitulo{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
 .ui.cards{
-    padding: 200px;
+    margin-top: 50px;
+    margin-left: 100px; 
+    margin-bottom: 50px;
 }
 
-#imagem_card_casa{
-    margin-left: 10px;
+#bandeiras{
+    display: flex;
+    align-content: space-between;
+    margin-bottom: 10px;
+}
+
+#time_casa{
     margin-right: 30px;
-    margin-bottom: 10px;
-} 
+    margin-left: 15px;
+}
 
-#imagem_card_fora{
+#time_fora{
     margin-left: 30px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-
-}  
-
-#nome_times{
-    display: inline-flex;
-    align-content: space-around;    
-}
-
-#nome_time_fora{
-    padding-right: 30px;
-}
-
-#nome_time_casa{
-    padding-right: 135px;
 }
 
 #icons{
-    display:block;
-    align-items:center;
+    display: flex;        
+    flex-direction: column;
+    justify-content: space-around;
 }
 
+.calendar.outline.icon{
+    font-size: 15px;
+}
 
+.map.pin.icon{
+    font-size: 15px;
+}
 
+.clock.outline.icon{
+    font-size: 15px;
+}
 
+.ui.search{
+    margin-top: 60px;
+    margin-left: 400px;  
+    font-size: 20px;
+}
 
+#pesquisa{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 400px;
+}
