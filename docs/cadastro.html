@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aposte Já</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/cadastroStyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/semantic.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="assets/js/semantic.min.js"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class"col-md-12 cadastro">      
+    <h2 class="ui cemtered header">Cadastre-se</h2>
+  </div>
+  <form class="formulario">
+   <fieldset class="fieldset">
+     <div class="divTable">
+       <div class="divTableBody">    
+        <div class="divTableRow">
+          <div class="divTableCell"><a class="ui green label">Email:</a></div>
+          <div class="ui inverted input"> <input class="ui input focus" placeholder="E-mail" type="text" name="email"/></div>
+        </div>  
+        <div class="divTableRow">
+          <div class="divTableCell"> <a class="ui green label">Usuário:</a> </div>
+          <div class="ui inverted input"><input class="ui input focus" placeholder="Usuário" type="text" name="usuario"/></div>
+        </div>
+        <div class="divTableRow">
+         <div class="divTableCell"> <a class="ui green label" style="width: 117px">Data Nascimento</a> </div>
+         <div class="ui inverted input"><input class="ui input focus" type="date" placeholder="DataDeNascimento" style="width: 208px"/></div>
+       </div>
+       <div class="divTableRow">
+         <div class="divTableCell"><a class="ui green label">Senha:</a>  </div>
+         <div class="ui inverted input"><input class="ui input focus" placeholder="Senha" type="password" name="senha"/></div>
+       </div>
+     </div>
+   </div>
+   <div class="ui segment">
+     <div class="ui toggle checkbox">
+      <input type="checkbox" name="gift" tabindex="0" class="ui toggle">
+      <label class="">Li e aceito os termos de compromisso</label>
+    </div>          
+  </div>
+</div>
+<div class="ui button" tabindex="0" style="margin-left: 110px" box-shadow="#888888">Cadastrar</div>  
+</fieldset>
+</form>
+
+<script src="assets/js/script.js"></script>
+<script type="text/javascript">
+  $('.ui.toggle.checkbox')
+  .checkbox();
+
+  $(document).ready(function(){
+    Script.start('off');
+  });
+</script>
+
+</body>
+</html>
