@@ -1,4 +1,5 @@
 #subtitulo{
+    font-family: 'Baloo Paaji';
     font-size: 40px;
     margin-top: 30px;
     margin-left: 15px;
@@ -6,7 +7,7 @@
 
 .ui.cards{
     margin-top: 50px;
-    margin-left: 100px; 
+    margin-left: 200px; 
     margin-bottom: 50px;
 }
 
@@ -17,11 +18,19 @@
 }
 
 #time_casa{
+    font-family: 'Baloo Paaji';
     margin-right: 30px;
     margin-left: 15px;
 }
 
+#versus{
+    font-family: 'Baloo Paaji';
+    margin-top: 15px;
+    font-size: 20px;
+}
+
 #time_fora{
+    font-family: 'Baloo Paaji';
     margin-left: 30px;
 }
 
@@ -50,7 +59,12 @@
 }
 
 #pesquisa{
+    font-family: 'Baloo Paaji';
     font-size: 40px;
     margin-top: 30px;
     margin-left: 400px;
+}
+
+.ui.search{
+    font-size:20px;
 }
