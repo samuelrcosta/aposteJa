@@ -1,6 +1,8 @@
 # aposteJa
 Sistema web de apostas esportivas desenvolvido para disciplina de Desenvolvimento de Aplicações Web
 
+https://samuelrcosta.github.io/aposteJa/
+
 ## Paginas
 - Home (João Vitor)
 - Pesquisa de Jogos (João Vitor)
