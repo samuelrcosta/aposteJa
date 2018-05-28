@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Aposte Já</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/login.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
     <script
@@ -12,38 +14,40 @@
         crossorigin="anonymous"></script>
     <script src="assets/js/semantic.min.js"></script>
 </head>
-<div class="ui middle aligned center aligned grid">
-  <div class="column">
-    <h2 class="ui image header">
-      <div class="content">
-       Faça o Login e começe suas apostas!
-      </div>
-    </h2>
-    <form class="ui large form">
-      <div class="ui stacked secondary  segment">
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="envelope icon"></i>
-            <input type="text" name="email" placeholder="E-mail">
+<body>
+  <div id="header"></div>
+  <div class="ui middle aligned center aligned grid">
+    <div class="column">
+      <h2 class="ui image header">
+        <div class="content">
+         Faça o Login e começe suas apostas!
+        </div>
+      </h2>
+      <form class="ui large form">
+        <div class="ui stacked secondary  segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="envelope icon"></i>
+              <input type="text" name="email" placeholder="E-mail">
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Senha">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input type="password" name="password" placeholder="Senha">
+            </div>
           </div>
+          <div class="ui checkbox">
+             <input type="checkbox" name="checkbox">
+                <label>Manter conectado</label>
+          </div>
+          <div class="ui fluid large green submit button">Entrar</div>
+           <div>Ainda não possui uma conta?</div>
+        <div><a href="cadastro.html">Clique aqui</a> e faça o seu cadastro agora!</div>
         </div>
-        <div class="ui checkbox">
-           <input type="checkbox" name="checkbox">
-              <label>Manter conectado</label>
-        </div>
-        <div class="ui fluid large green submit button">Entrar</div>
-         <div>Ainda não possui uma conta?</div>
-    	<div><a href="Clique aqui">Clique aqui</a> e faça o seu cadastro agora!</div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 
 <script src="assets/js/script.js"></script>
   <script type="text/javascript">

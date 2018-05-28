@@ -1,34 +1,11 @@
-#top-menu{
-    font-family: 'Baloo Paaji';
-    font-size: 18px;
+.ui.grid {
+    margin-top: 6rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
-#left-menu{
-    display: none;
-    top: 51px;
+.form{
+    max-width: 370px!important;
+    margin: auto;
 }
-
-.formulario{
-   width: 25%;
-   margin: auto;
-}
-
-.divTable{
-	display: table;
-	width: 100%;
-}
-
-.divTableRow {
-	display: table-row;
-}
-
-.divTableCell {
-	border: 0px solid #999999;
-	display: table-cell;
-	padding: 3px 10px;
-}
-
-.ui input {
-    height: 28px;
-}
-

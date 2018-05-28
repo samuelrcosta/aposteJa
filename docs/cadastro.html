@@ -2,65 +2,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Aposte Já</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/cadastroStyle.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/semantic.css">
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-  <script src="assets/js/semantic.min.js"></script>
+    <meta charset="utf-8">
+    <title>Aposte Já</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/cadastroStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet"> 
 </head>
-
 <body>
   <div id="header"></div>
-  <div class"col-md-12 cadastro">      
-    <h2 class="ui cemtered header">Cadastre-se</h2>
-  </div>
-  <form class="formulario">
-   <fieldset class="fieldset">
-     <div class="divTable">
-       <div class="divTableBody">    
-        <div class="divTableRow">
-          <div class="divTableCell"><a class="ui green label">Email:</a></div>
-          <div class="ui inverted input"> <input class="ui input focus" placeholder="E-mail" type="text" name="email"/></div>
-        </div>  
-        <div class="divTableRow">
-          <div class="divTableCell"> <a class="ui green label">Usuário:</a> </div>
-          <div class="ui inverted input"><input class="ui input focus" placeholder="Usuário" type="text" name="usuario"/></div>
-        </div>
-        <div class="divTableRow">
-         <div class="divTableCell"> <a class="ui green label" style="width: 117px">Data Nascimento</a> </div>
-         <div class="ui inverted input"><input class="ui input focus" type="date" placeholder="DataDeNascimento" style="width: 208px"/></div>
-       </div>
-       <div class="divTableRow">
-         <div class="divTableCell"><a class="ui green label">Senha:</a>  </div>
-         <div class="ui inverted input"><input class="ui input focus" placeholder="Senha" type="password" name="senha"/></div>
-       </div>
-     </div>
-   </div>
-   <div class="ui segment">
-     <div class="ui toggle checkbox">
-      <input type="checkbox" name="gift" tabindex="0" class="ui toggle">
-      <label class="">Li e aceito os termos de compromisso</label>
-    </div>          
-  </div>
-</div>
-<div class="ui button" tabindex="0" style="margin-left: 110px" box-shadow="#888888">Cadastrar</div>  
-</fieldset>
-</form>
+  <div class="ui middle aligned center aligned grid">
+      <div class="column">
+        <h2 class="ui image header">
+          <div class="content">
+           Faça o seu cadastro agora!
+          </div>
+        </h2>
+        <form class="ui large form">
+          <div class="ui stacked secondary  segment">
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="envelope icon"></i>
+                <input type="text" name="email" placeholder="E-mail">
+              </div>
+            </div>
+            <div class="field">
+                <div class="ui left icon input">
+                  <i class="user icon"></i>
+                  <input type="text" name="usuario" placeholder="Nome">
+                </div>
+              </div>
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="password" name="password" placeholder="Senha">
+              </div>
+            </div>
+            <div class="field">
+                <div class="ui left icon input">
+                  <i class="lock icon"></i>
+                  <input type="password" name="password" placeholder="Confirme a senha">
+                </div>
+              </div>
+            <div class="ui checkbox">
+               <input type="checkbox" name="checkbox">
+                  <label>Li e aceito os termos de compromisso</label>
+            </div>
+            <div style="margin-top: 15px;" class="ui fluid large green submit button">Entrar</div>
+             <div>Já possui uma conta?</div>
+          <div><a href="login.html">Clique aqui</a> e faça o seu cadastro agora!</div>
+          </div>
+        </form>
+      </div>
+    </div>
+ 
 
 <script src="assets/js/script.js"></script>
 <script type="text/javascript">
-  $('.ui.toggle.checkbox')
-  .checkbox();
+  $('.ui.toggle.checkbox').checkbox();
 
   $(document).ready(function(){
     Script.start('off');
   });
 </script>
-
 </body>
 </html>

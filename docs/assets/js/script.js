@@ -7,10 +7,10 @@ const Script = {
     TEMPLATE_HEADER_SEM_LOGIN: '',
     TEMPLATE_HEADER_COM_LOGIN: '',
     TEMPLATE_HEADER_ADMIN: '',
-    LOGIN_PAGE: '',
-    REGISTER_PAGE: '',
+    LOGIN_PAGE: 'login.html',
+    REGISTER_PAGE: 'cadastro.html',
     APOSTAS_PAGE: '',
-    CONTA_PAGE: '',
+    CONTA_PAGE: 'minhaconta.html',
 
     _loadTemplates: function _loadTemplates(){
         Script.TEMPLATE_HEADER_SEM_LOGIN = 

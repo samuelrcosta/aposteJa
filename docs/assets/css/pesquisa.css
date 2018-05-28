@@ -5,10 +5,19 @@
     margin-left: 15px;
 }
 
+#pesquisa_link{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
 .ui.cards{
-    margin-top: 50px;
-    margin-left: 200px; 
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #bandeiras{
@@ -54,17 +63,14 @@
 
 .ui.search{
     margin-top: 60px;
-    margin-left: 400px;  
     font-size: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 #pesquisa{
     font-family: 'Baloo Paaji';
     font-size: 40px;
-    margin-top: 30px;
-    margin-left: 400px;
-}
-
-.ui.search{
-    font-size:20px;
+    margin-top: 70px;
+    text-align: center;
 }
