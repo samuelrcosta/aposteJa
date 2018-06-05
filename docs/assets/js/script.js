@@ -23,10 +23,11 @@ const Script = {
         '</div>';
         Script.TEMPLATE_HEADER_COM_LOGIN = 
         '<div class="ui green three inverted menu" id="top-menu">' +
-            '<a href="index.html" class="item">Aposte Já</a>' +
+            '<a href="index_logado.html" class="item">Aposte Já</a>' +
             '<div class="right menu">' +
                 '<a href="' + Script.APOSTAS_PAGE + '" class="item">Apostas</a>' +
                 '<a href="' + Script.CONTA_PAGE + '" class="item">Conta</a>' + 
+                '<a href="index.html" class="item">Sair</a>' + 
             '</div>' +
         '</div>';
         Script.TEMPLATE_HEADER_ADMIN = 

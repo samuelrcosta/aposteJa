@@ -1,0 +1,38 @@
+.bandeiras{
+    display: flex;
+}
+.bandeiras div{
+    flex: 1;
+}
+.versus{
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.nome_time{
+    text-align: center;
+}
+.registar-aposta{
+    display: flex!important;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+.registar-aposta a{
+    font-size: 20px!important;
+    line-height: 30px!important;
+}
+.container-dados-aposta{
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.container-dados-aposta button{
+    cursor: default!important;
+    font-size: 15px!important;
+    padding: 25px!important;
+    width: 100%;
+}
