@@ -32,19 +32,20 @@ const Script = {
         '</div>';
         Script.TEMPLATE_HEADER_ADMIN = 
         '<div class="ui green three inverted menu" id="top-menu">'+
-            '<a href="index.html" class="item">Aposte Já</a>'+
+            '<a href="admin.html" class="item">Aposte Já</a>'+
             '<a class="item" id="open-menu"><i class="bars icon"></i></a>'+
             '<div class="right menu">'+
-                '<a class="item">Sair</a>'+
+                '<a href="index.html" class="item">Sair</a>'+
             '</div>'+
         '</div>'+
         '<div class="ui left fixed vertical menu" id="left-menu">'+
-        '<div class="item">'+
+        '<div class="item" style="display: flex;align-items: center;">'+
             '<img class="ui mini image" src="assets/images/avatar.png">'+
+            '<div style="margin-left: 10px">Fulano Ciclano</div>'+
         '</div>'+
-        '<a class="item">Jogos</a>'+
-        '<a class="item">Apostas</a>'+
-        '<a class="item">Usuários</a>'+
+        '<a href="admin.html" class="item">Jogos</a>'+
+        '<a href="apostas.html" class="item">Apostas</a>'+
+        '<a href="usuarios.html" class="item">Usuários</a>'+
         '</div>';
     },
 

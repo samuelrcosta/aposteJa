@@ -4,11 +4,28 @@
 .bandeiras div{
     flex: 1;
 }
+.bandeiras .time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .versus{
     text-align: center;
     font-size: 30px;
     line-height: 50px;
     font-weight: bold;
+}
+.versus input{
+    width: 50px;
+    height: 50px;
+    padding: 5px!important;
+    font-size: 18px;
+    text-align: center!important;
+}
+.versus span{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .nome_time{
     text-align: center;
@@ -35,4 +52,39 @@
     font-size: 15px!important;
     padding: 25px!important;
     width: 100%;
+}
+.placar-aposta-container{
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #000000;
+}
+.quantidade-aposta-container{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quantidade-aposta-container p{
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.quantidade-aposta-container input{
+    max-width: 70px!important;
+    text-align: center!important;
+}
+.resultado-calculo{
+    margin-left: 10px;
+}
+.valor{
+    text-align: left;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.total{
+    font-size: 12px;
+    font-weight: normal;
 }
