@@ -9,7 +9,7 @@ const Script = {
     TEMPLATE_HEADER_ADMIN: '',
     LOGIN_PAGE: 'login.html',
     REGISTER_PAGE: 'cadastro.html',
-    APOSTAS_PAGE: '',
+    APOSTAS_PAGE: 'apostas.html',
     CONTA_PAGE: 'minhaconta.html',
 
     _loadTemplates: function _loadTemplates(){
@@ -44,7 +44,7 @@ const Script = {
             '<div style="margin-left: 10px">Fulano Ciclano</div>'+
         '</div>'+
         '<a href="admin.html" class="item">Jogos</a>'+
-        '<a href="apostas.html" class="item">Apostas</a>'+
+        '<a href="admin_apostas.html" class="item">Apostas</a>'+
         '<a href="usuarios.html" class="item">Usuários</a>'+
         '</div>';
     },

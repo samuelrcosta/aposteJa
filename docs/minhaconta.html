@@ -22,23 +22,18 @@
                     <h4 class="ui dividing header">Informações de Usuário</h4>
                     <div class="field">
                         <label>Nome</label>
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="text" name="primeiroNomeInput" placeholder="Primeiro Nome">
-                            </div>
-                            <div class="field">
-                                <input type="text" name="segundoNomeInput" placeholder="Segundo Nome">
-                            </div>
+                        <div class="field">
+                            <input type="text" name="primeiroNomeInput" placeholder="Nome" value="José Abreu">
                         </div>
                     </div>
                     <div class="fields">
                         <div class="seven wide field">
                             <label>CPF</label>
-                            <input type="text" name="cpfInput" maxlength="11" placeholder="Número do CPF">
+                            <input type="text" name="cpfInput" maxlength="11" placeholder="Número do CPF" value="11111111109">
                         </div>
                         <div class="three wide field">
                             <label>Dia</label>
-                            <input type="text" name="diaInput" maxlength="2" placeholder="">
+                            <input type="text" name="diaInput" maxlength="2" placeholder="" value="01">
                         </div>
                         <div class="six wide field">
                             <label>Mês</label>
@@ -46,7 +41,7 @@
                                 <div class="field">
                                     <select class="ui fluid search dropdown" name="mesInput">
                                         <option value="01">Janeiro</option>
-                                        <option value="02">Fevereiro</option>
+                                        <option value="02" selected>Fevereiro</option>
                                         <option value="03">Março</option>
                                         <option value="04">Abril</option>
                                         <option value="05">Maio</option>
@@ -60,7 +55,7 @@
                                     </select>
                                 </div>
                                 <div class="field">
-                                    <input type="text" name="anoInput" maxlength="4" placeholder="Ano">
+                                    <input type="text" name="anoInput" maxlength="4" placeholder="Ano" value="1995">
                                 </div>
                             </div>
                         </div>
@@ -69,10 +64,10 @@
                         <label>Endereço</label>
                         <div class="fields">
                             <div class="twelve wide field">
-                                <input type="text" name="endereçoInput" placeholder="Endereço">
+                                <input type="text" name="endereçoInput" placeholder="Endereço" value="Vale das Rosas">
                             </div>
                             <div class="four wide field">
-                                <input type="text" name="numeroEnderecoInput" placeholder="Número">
+                                <input type="text" name="numeroEnderecoInput" placeholder="Número" value="123">
                             </div>
                         </div>
                     </div>
@@ -89,7 +84,7 @@
                                 <option value="CE">Ceará</option>
                                 <option value="DF">Distrito Federal</option>
                                 <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
+                                <option value="GO" selected>Goiás</option>
                                 <option value="MA">Maranhão</option>
                                 <option value="MT">Mato Grosso</option>
                                 <option value="MS">Mato Grosso do Sul</option>
@@ -115,7 +110,7 @@
                             <div class="ui fluid search selection dropdown">
                                 <input type="hidden" name="country">
                                 <i class="dropdown icon"></i>
-                                <div class="default text">Select Country</div>
+                                <div class="text"><i class="br flag"></i>Brazil</div>
                                 <div class="menu">
                                 <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
                                 <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -366,10 +361,10 @@
                     <h4 class="ui dividing header">Dados de Acesso</h4>
                     <div class="field">
                         <label>E-mail</label>
-                        <input type="email" name="emailInput" maxlength="50" placeholder="">
+                        <input type="email" name="emailInput" maxlength="50" placeholder="" value="jose@gmail.com">
                     </div>
                     <div class="field">
-                        <label>Senha</label>
+                        <label>Nova Senha</label>
                         <input type="password" name="senhaInput" maxlength="20" placeholder="">
                     </div>
                     <div class="ui green button">Alterar</div>

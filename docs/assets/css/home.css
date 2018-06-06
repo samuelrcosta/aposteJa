@@ -3,11 +3,14 @@
     font-size: 40px;
     margin-top: 30px;
     margin-left: 15px;
+    line-height: 35px;
 }
 
 .ui.cards{
     margin-top: 40px;
     margin-bottom: 30px;
+    margin-right: 0;
+    margin-left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -73,4 +76,5 @@
     font-size: 40px;
     margin-top: 70px;
     text-align: center;
+    line-height: 35px;
 }

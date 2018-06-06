@@ -3,6 +3,7 @@
     font-size: 40px;
     margin-top: 30px;
     margin-left: 15px;
+    line-height: 35px;
 }
 
 #pesquisa_link{
@@ -72,5 +73,6 @@
     font-family: 'Baloo Paaji';
     font-size: 40px;
     margin-top: 70px;
+    line-height: 35px;
     text-align: center;
 }
