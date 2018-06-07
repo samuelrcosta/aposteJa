@@ -8,3 +8,14 @@
     border: 2px;
     border-color: black;
 }
+
+#container{
+    border:0.5px;
+    border-style: solid;
+    border-color:#21ba45;
+    border-radius: 5px;
+}
+
+.ui.text.container{
+    margin-top: 30px;
+}
