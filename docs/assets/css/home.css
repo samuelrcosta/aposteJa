@@ -1,9 +1,18 @@
 #subtitulo{
     font-family: 'Baloo Paaji';
+    font-size: 30px;
+    margin-top: 45px;
+    margin-left: 15px;
+    line-height: 35px;
+}
+
+#titulo-principal{
+    font-family: 'Baloo Paaji';
     font-size: 40px;
     margin-top: 30px;
     margin-left: 15px;
     line-height: 35px;
+    text-align: center;
 }
 
 .ui.cards{
