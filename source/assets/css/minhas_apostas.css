@@ -1,0 +1,33 @@
+.card_aposta{
+    width: 100%!important;
+}
+.bandeiras{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.time{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.nome_time{
+    text-align: center;
+}
+.versus{
+    font-weight: bold;
+    font-size: 28px;
+}
+.versus span{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.yellow{
+    color: orangered;
+}
+.green{
+    color: green;
+}

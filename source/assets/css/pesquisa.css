@@ -1,0 +1,78 @@
+#subtitulo{
+    font-family: 'Baloo Paaji';
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 15px;
+    line-height: 35px;
+}
+
+#pesquisa_link{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+.ui.cards{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#bandeiras{
+    display: flex;
+    align-content: space-between;
+    margin-bottom: 10px;
+}
+
+#time_casa{
+    font-family: 'Baloo Paaji';
+    margin-right: 30px;
+    margin-left: 15px;
+}
+
+#versus{
+    font-family: 'Baloo Paaji';
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#time_fora{
+    font-family: 'Baloo Paaji';
+    margin-left: 30px;
+}
+
+#icons{
+    display: flex;        
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.calendar.outline.icon{
+    font-size: 15px;
+}
+
+.map.pin.icon{
+    font-size: 15px;
+}
+
+.clock.outline.icon{
+    font-size: 15px;
+}
+
+.ui.search{
+    margin-top: 60px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#pesquisa{
+    font-family: 'Baloo Paaji';
+    font-size: 40px;
+    margin-top: 70px;
+    line-height: 35px;
+    text-align: center;
+}

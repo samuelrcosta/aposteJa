@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $('#open-menu').click(function(){
+        if($("#left-menu").hasClass('active')){
+            $("#left-menu").removeClass('active').hide();
+        }else{
+            $("#left-menu").addClass('active').show();
+        }
+    });
+});

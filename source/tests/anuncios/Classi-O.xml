@@ -1,0 +1,135 @@
+<dataset>
+    <table name="anuncios">
+        <column>id</column>
+        <column>id_usuario</column>
+        <column>titulo</column>
+        <column>dataPublicacao</column>
+        <column>descricao</column>
+        <column>id_categoria</column>
+        <column>preco</column>
+        <column>estado</column>
+        <row>
+            <value>1</value>
+            <value>1</value>
+            <value>Teste Titulo</value>
+            <value>2017-10-25 19:30:00</value>
+            <value>Descrição do Anúncio</value>
+            <value>1</value>
+            <value>100.50</value>
+            <value>1</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>2</value>
+            <value>Teste Titulo 2</value>
+            <value>2017-10-23 19:30:00</value>
+            <value>Descr Anc</value>
+            <value>3</value>
+            <value>55.12</value>
+            <value>3</value>
+        </row>
+    </table>
+    <table name="anuncios_imagens">
+        <column>id</column>
+        <column>id_anuncio</column>
+        <column>url</column>
+        <row>
+            <value>1</value>
+            <value>1</value>
+            <value>imagem_anuncio</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>2</value>
+            <value>imagem_anuncio2</value>
+        </row>
+    </table>
+    <table name="usuarios">
+        <column>id</column>
+        <column>nome</column>
+        <column>email</column>
+        <column>senha</column>
+        <column>telefone</column>
+        <column>celular</column>
+        <column>id_estado</column>
+        <column>id_cidade</column>
+        <column>hashRecuperacao</column>
+        <row>
+            <value>1</value>
+            <value>Administrador</value>
+            <value>adm@adm.com.br</value>
+            <value>202cb962ac59075b964b07152d234b70</value>
+            <value>(62) 3232-3232</value>
+            <value>(62) 98585-8585</value>
+            <value>1</value>
+            <value>1</value>
+            <value>b0583adaea49e0b620f660dc2de6c40a</value>
+        </row>
+    </table>
+    <table name="categorias">
+        <column>id</column>
+        <column>nome</column>
+        <row>
+            <value>1</value>
+            <value>Carros</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>Motos</value>
+        </row>
+        <row>
+            <value>3</value>
+            <value>Barcos</value>
+        </row>
+    </table>
+    <table name="cidades">
+        <column>id</column>
+        <column>nome</column>
+        <column>id_estado</column>
+        <row>
+            <value>1</value>
+            <value>Inhumas</value>
+            <value>1</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>Salvador</value>
+            <value>3</value>
+        </row>
+        <row>
+            <value>3</value>
+            <value>Rio de Janeiro</value>
+            <value>5</value>
+        </row>
+    </table>
+    <table name="estados">
+        <column>id</column>
+        <column>nome</column>
+        <column>uf</column>
+        <row>
+            <value>1</value>
+            <value>Goiás</value>
+            <value>GO</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>São Paulo</value>
+            <value>SP</value>
+        </row>
+        <row>
+            <value>3</value>
+            <value>Distrito Federal</value>
+            <value>DF</value>
+        </row>
+        <row>
+            <value>4</value>
+            <value>Bahia</value>
+            <value>BA</value>
+        </row>
+        <row>
+            <value>5</value>
+            <value>Rio de Janeiro</value>
+            <value>RJ</value>
+        </row>
+    </table>
+</dataset>

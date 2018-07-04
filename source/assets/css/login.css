@@ -1,0 +1,34 @@
+.form{
+	width: 362px;
+	margin:auto;
+}
+
+.ui.stacked.secondary.segment{
+padding: 2em 1em;
+width: 360px;
+}
+
+.ui.checkbox{
+	margin-right:190px;
+}
+
+.ui.fluid.large.teal.submit.button{
+	padding-bottom: 15px;
+	line-height: 15px;
+}
+
+.ui.grid {
+    margin-top: 9rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.ui.button{
+margin:13px .25em 0 0;
+}
+
+.ui.stacked.segment:before{
+  width: 100%;
+  height: 6px;
+}

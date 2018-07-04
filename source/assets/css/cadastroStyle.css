@@ -1,0 +1,11 @@
+.ui.grid {
+    margin-top: 6rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.form{
+    max-width: 370px!important;
+    margin: auto;
+}

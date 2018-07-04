@@ -1,0 +1,14 @@
+#top-menu{
+    font-family: 'Baloo Paaji';
+    font-size: 18px;
+    border-radius: 0!important;
+}
+#left-menu{
+    display: none;
+    top: 51px;
+}
+@media all and (max-width:407px) {
+    #top-menu {
+        font-size: 15px;
+    }
+}

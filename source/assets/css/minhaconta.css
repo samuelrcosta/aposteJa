@@ -1,0 +1,21 @@
+.ui.fluid.large.teal.submit.button{
+	padding-bottom: 15px;
+	line-height: 15px;
+}
+
+.ui.middle.aligned.center.aligned.grid{
+    margin-top: 100px;
+    border: 2px;
+    border-color: black;
+}
+
+#container{
+    border:0.5px;
+    border-style: solid;
+    border-color:#21ba45;
+    border-radius: 5px;
+}
+
+.ui.text.container{
+    margin-top: 30px;
+}
