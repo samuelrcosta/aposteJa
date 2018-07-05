@@ -1,7 +1,7 @@
 <div class="ui container" style="margin-top: 60px;margin-bottom: 60px;">
     <div class="ui large header">Editar Jogo</div>
 
-    <form class="ui form">
+    <form class="ui form" method="POST">
         <h4 class="ui dividing header">Data do Jogo</h4>
         <div class="fields">
             <div class="six wide field">
@@ -46,11 +46,20 @@
                 <input type="text" required name="valor" id="valor" placeholder="Valor" value="<?= number_format($game['valor'], 2, ",", "."); ?>">
             </div>
         </div>
-        <a href="<?= BASE_URL ?>adminGames" class="ui fluid large green button" style="margin-top: 20px" tabindex="1">Salvar</a>
+        <div class="ui segment">
+            <div class="field">
+                <div class="ui toggle checkbox <?= ($game['popular'] == "1")? 'checked' : '' ?>">
+                    <input type="checkbox" name="popular" tabindex="0" class="hidden" <?= ($game['popular'] == "1")? 'checked' : '' ?> >
+                    <label>Jogo Popular</label>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="Salvar" class="ui fluid large green button" style="margin-top: 20px" tabindex="1">
     </form>
     <script>
         $(document).ready(function(){
-          $("#data").mask('00/00/0000 00:00');
-          $('#valor').mask("#.##0,00", {reverse: true});
+            $("#data").mask('00/00/0000 00:00');
+            $('#valor').mask("#.##0,00", {reverse: true});
+            $('.ui.checkbox').checkbox("");
          });
     </script>

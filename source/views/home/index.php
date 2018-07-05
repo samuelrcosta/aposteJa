@@ -6,129 +6,49 @@
     Jogos mais populares
 </div>
 <div class="ui cards">
+    <?php foreach ($games as $game): ?>
     <div class="card">
         <div class="content">
             <a href="<?= BASE_URL; ?>game/open/id" style="display: block; color: black">
                 <div id="bandeiras">
                     <div id="time_casa">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/bandeira_brasil.PNG">
+                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/<?= $game['logo_time_casa']; ?>">
                         <div id = "nome_time_fora">
-                            Brasil
+                            <?= $game['time_casa']; ?>
                         </div>
                     </div>
                     <div id="versus">
                         X
                     </div>
                     <div id="time_fora">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/bandeira_suica.jpg">
+                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/<?= $game['logo_time_visitante']; ?>">
                         <div id="nome_time_fora">
-                            Suíça
+                            <?= $game['time_visitante']; ?>
                         </div>
                     </div>
                 </div>
                 <div id="icons">
                     <div id="data_jogo">
                         <i class="calendar outline icon"></i>
-                        17/06/2018
+                        <?= $game['data']; ?>
                     </div>
                     <div id="local_jogo">
                         <i class="map pin icon"></i>
-                        Rostov, Rússia
+                        <?= $game['local']; ?>
                     </div>
                     <div id="horario_jogo">
                         <i class="clock outline icon"></i>
-                        15h
+                        <?= $game['hora']; ?>
                     </div>
                     <div id="valor_jogo">
                         <i class="money bill alternate outline icon"></i>
-                        R$ 15.00
+                        R$ <?= number_format($game['valor'], 2, ",", "."); ?>
                     </div>
                 </div>
             </a>
         </div>
     </div>
-    <div class="card">
-        <div class="content">
-            <a href="<?= BASE_URL; ?>game/open/id" style="display: block; color: black">
-                <div id="bandeiras">
-                    <div id="time_casa">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/bandeira_brasil.PNG">
-                        <div id="nome_time_fora">
-                            Brasil
-                        </div>
-                    </div>
-                    <div id="versus">
-                        X
-                    </div>
-                    <div id="time_fora">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/bandeira_costa_rica.png">
-                        <div id="nome_time_fora">
-                            Costa Rica
-                        </div>
-                    </div>
-                </div>
-                <div id="icons">
-                    <div id="data_jogo">
-                        <i class="calendar outline icon"></i>
-                        22/06/2018
-                    </div>
-                    <div id="local_jogo">
-                        <i class="map pin icon"></i>
-                        São Petersburgo, Rússia
-                    </div>
-                    <div id="horario_jogo">
-                        <i class="clock outline icon"></i>
-                        09h
-                    </div>
-                    <div id="valor_jogo">
-                        <i class="money bill alternate outline icon"></i>
-                        R$ 10.00
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="content">
-            <a href="<?= BASE_URL; ?>game/open/id" style="display: block; color: black">
-                <div id="bandeiras">
-                    <div id="time_casa">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/bandeira_brasil.PNG">
-                        <div id="nome_time_fora">
-                            Brasil
-                        </div>
-                    </div>
-                    <div id="versus">
-                        X
-                    </div>
-                    <div id="time_fora">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/bandeira_servia.png">
-                        <div id="nome_time_fora">
-                            Sérvia
-                        </div>
-                    </div>
-                </div>
-                <div id ="icons">
-                    <div id="data_jogo">
-                        <i class="calendar outline icon"></i>
-                        27/06/2018
-                    </div>
-                    <div id="local_jogo">
-                        <i class="map pin icon"></i>
-                        Moscou, Rússia
-                    </div>
-                    <div id="horario_jogo">
-                        <i class="clock outline icon"></i>
-                        15h
-                    </div>
-                    <div = "valor_jogo">
-                    <i class="money bill alternate outline icon"></i>
-                    R$ 12.00
-                </div>
-        </div>
-        </a>
-    </div>
-</div>
+    <?php endforeach; ?>
 </div>
 
 <div id="pesquisa">

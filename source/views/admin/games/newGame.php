@@ -1,74 +1,65 @@
 <div class="ui container" style="margin-top: 60px;margin-bottom: 60px;">
-    <div class="ui large header">Cadastrar Jogo</div>
+    <div class="ui large header">Novo Jogo</div>
 
-    <form class="ui form">
+    <form class="ui form" method="POST">
         <h4 class="ui dividing header">Data do Jogo</h4>
         <div class="fields">
-            <div class="three wide field">
-                <label>Dia</label>
-                <input type="text" name="diaInput" maxlength="2" placeholder="">
-            </div>
             <div class="six wide field">
-                <label>Mês</label>
-                <div class="two fields">
-                    <div class="field">
-                        <select class="ui fluid search dropdown" name="mesInput">
-                            <option value="01">Janeiro</option>
-                            <option value="02">Fevereiro</option>
-                            <option value="03">Março</option>
-                            <option value="04">Abril</option>
-                            <option value="05">Maio</option>
-                            <option value="06">Junho</option>
-                            <option value="07">Julho</option>
-                            <option value="08">Agosto</option>
-                            <option value="09">Setembro</option>
-                            <option value="10">Outubro</option>
-                            <option value="11">Novembro</option>
-                            <option value="12">Dezembro</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <input type="text" name="anoInput" maxlength="4" placeholder="Ano">
-                    </div>
-                </div>
+                <input type="text" required name="data" id="data"  placeholder="dd/mm/yyyy hh:mm"">
             </div>
         </div>
         <div class="field">
             <label>Campeonato</label>
             <div class="field">
-                <select class="ui fluid search dropdown" name="campeonatoInput">
-                    <option value="01">Copa do Mundo</option>
-                    <option value="02">Campeonato Brasileiro</option>
-                    <option value="03">Champions League</option>
-                    <option value="04">Copa do Brasil</option>
+                <select class="ui fluid search dropdown" required name="campeonato" id="campeonato">
+                    <?php foreach ($leagues as $l):?>
+                        <option value="<?= $l['id'] ?>"><?= $l['nome'] ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
         </div>
         <div class="two fields">
             <div class="field">
                 <label>Time da Casa</label>
-                <input type="text" name="time_casa" placeholder="Time da Casa">
+                <select class="ui fluid search dropdown" required name="time_casa" id="time_casa">
+                    <?php foreach ($times as $t):?>
+                        <option value="<?= $t['id'] ?>"><?= $t['nome'] ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
             <div class="field">
                 <label>Time Visitante</label>
-                <input type="text" name="time_visitante" placeholder="Time Visitante">
+                <select class="ui fluid search dropdown" required name="time_visitante" id="time_visitante">
+                    <?php foreach ($times as $t):?>
+                        <option value="<?= $t['id'] ?>"><?= $t['nome'] ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
         </div>
         <div class="field">
             <label>Local</label>
-            <input type="text" name="local" placeholder="Local do jogo...">
+            <input type="text" name="local" placeholder="Local do jogo..." ">
         </div>
-        <div class="two fields">
-            <div class="field">
-                <label>Horário</label>
-                <input type="text" name="horario" placeholder="Horário">
-            </div>
+        <div class="fields">
             <div class="field">
                 <label>Valor</label>
-                <input type="text" name="time_visitante" placeholder="Valor">
+                <input type="text" required name="valor" id="valor" placeholder="Valor">
             </div>
         </div>
-        <a href="<?= BASE_URL ?>adminGames" class="ui fluid large green button" style="margin-top: 20px" tabindex="1">Salvar</a>
+        <div class="ui segment">
+            <div class="field">
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" name="popular" tabindex="0" class="hidden" >
+                    <label>Jogo Popular</label>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="Salvar" class="ui fluid large green button" style="margin-top: 20px" tabindex="1">
     </form>
-
-</div>
+    <script>
+        $(document).ready(function(){
+            $("#data").mask('00/00/0000 00:00');
+            $('#valor').mask("#.##0,00", {reverse: true});
+            $('.ui.checkbox').checkbox("toggle");
+        });
+    </script>

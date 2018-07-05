@@ -13,9 +13,10 @@ class homeController extends controller{
      *
      */
     public function index($logged = false){
+        $g = new Games();
         $dados = array();
         $dados['title'] = 'Apostas Já';
-
+        $dados['games'] = $g->getPopularGames();
         if($logged){
             $_SESSION['logged'] = true;
         }

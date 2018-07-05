@@ -15,7 +15,7 @@ class adminController extends controller{
         $dados = array();
         $dados['title'] = 'Admin';
         echo "TA AQUI";
-        if($logged){
+        if(!$logged){
             $_SESSION['admin_logged'] = true;
             header("Location: ".BASE_URL."adminGames");
         }else{
