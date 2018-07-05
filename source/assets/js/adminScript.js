@@ -6,4 +6,14 @@ $(document).ready(function(){
             $("#left-menu").addClass('active').show();
         }
     });
+
+    $("input:text").click(function() {
+        $(this).parent().find("input:file").click();
+    });
+
+    $('input:file', '.ui.action.input').on('change', function(e) {
+        let name = e.target.files[0].name;
+        $('input:text', $(e.target).parent()).val(name);
+    });
+
 });

@@ -59,6 +59,18 @@ id_time_visitante, (SELECT nome FROM times WHERE id = jogos.id_time_visitante) a
         return $array;
     }
 
+    public function getGamesByTeamId($team){
+        $array = array();
+        $sql = "SELECT * FROM jogos WHERE id_time_casa = ? OR id_time_visitante = ?";
+        $sql = $this->db->prepare($sql);
+        $sql->execute(array($team, $team));
+        $sql = $sql->fetchAll();
+        if($sql && count($sql)){
+            $array = $sql;
+        }
+        return $array;
+    }
+
     public function newGame($status, $data, $id_campeonato, $id_casa, $id_visitante, $local, $valor, $resultado_casa, $resultado_visitante, $popular){
         $sql = "INSERT INTO jogos (status, data, id_campeonato, id_time_casa, id_time_visitante, local, valor, resultado_casa, resultado_visitante, popular) VALUES (?, STR_TO_DATE(?, '%d/%m/%Y %H:%i'), ?, ?, ?, ?, ?, ?, ?, ?)";
         $sql = $this->db->prepare($sql);
