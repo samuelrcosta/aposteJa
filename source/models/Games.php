@@ -37,7 +37,7 @@ id_time_visitante, (SELECT nome FROM times WHERE id = jogos.id_time_visitante) a
 
     public function getGame($id){
         $array = array();
-        $sql = "SELECT id, status, DATE_FORMAT(data, '%d/%m/%Y %H:%i') as data, id_campeonato, id_time_casa, id_time_visitante, local, valor, resultado_casa, resultado_visitante, popular FROM jogos WHERE id = ?";
+        $sql = "SELECT id, status, DATE_FORMAT(data, '%d/%m/%Y %H:%i') as data, DATE_FORMAT(data, '%d/%m/%Y') as dia, DATE_FORMAT(data, '%H:%i') as hora, id_campeonato, (SELECT nome FROM campeonatos WHERE id = jogos.id_campeonato) as campeonato, id_time_casa, (SELECT nome FROM times WHERE id = jogos.id_time_casa) as time_casa, (SELECT logo FROM times WHERE id = jogos.id_time_casa) as logo_time_casa, id_time_visitante, (SELECT nome FROM times WHERE id = jogos.id_time_visitante) as time_visitante, (SELECT logo FROM times WHERE id = jogos.id_time_visitante) as logo_time_visitante, local, valor, resultado_casa, resultado_visitante, popular FROM jogos WHERE id = ?";
         $sql = $this->db->prepare($sql);
         $sql->execute(array($id));
         $sql = $sql->fetch();

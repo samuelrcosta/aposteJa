@@ -9,10 +9,10 @@
     <?php foreach ($games as $game): ?>
     <div class="card">
         <div class="content">
-            <a href="<?= BASE_URL; ?>game/open/id" style="display: block; color: black">
+            <a href="<?= BASE_URL; ?>game/open/<?= $game['id']; ?>" style="display: block; color: black">
                 <div id="bandeiras">
                     <div id="time_casa">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/<?= $game['logo_time_casa']; ?>">
+                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/Times/<?= $game['logo_time_casa']; ?>">
                         <div id = "nome_time_fora">
                             <?= $game['time_casa']; ?>
                         </div>
@@ -21,7 +21,7 @@
                         X
                     </div>
                     <div id="time_fora">
-                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/<?= $game['logo_time_visitante']; ?>">
+                        <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>assets/imgs/Times/<?= $game['logo_time_visitante']; ?>">
                         <div id="nome_time_fora">
                             <?= $game['time_visitante']; ?>
                         </div>

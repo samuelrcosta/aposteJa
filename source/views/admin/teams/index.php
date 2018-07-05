@@ -29,7 +29,7 @@
             <tr>
                 <td><?= $time['id']; ?></td>
                 <td><?= $time['nome']; ?></td>
-                <td><img style="max-width: 50px;" src="<?= BASE_URL; ?>assets/imgs/<?= $time['logo']; ?>" /></td>
+                <td><img style="max-width: 50px;" src="<?= BASE_URL; ?>assets/imgs/Times/<?= $time['logo']; ?>" /></td>
                 <td class="single line">
                     <a href="<?= BASE_URL ?>adminTeams/deleteTeam/<?= $time['id']; ?>" class="ui icon red button" data-tooltip="Excluir Time" data-position="bottom left" data-inverted=""><i class="trash icon"></i></a>
                     <a href="<?= BASE_URL ?>adminTeams/editTeam/<?= $time['id']; ?>" class="ui icon orange button" data-tooltip="Editar Time" data-position="bottom left" data-inverted=""><i class="edit icon"></i></a>

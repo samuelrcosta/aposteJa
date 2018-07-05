@@ -25,12 +25,43 @@ class Teams extends model{
         return $array;
     }
 
-    public function newTeam($nome, $imagens){
+    public function newTeam($nome, $imagem){
         // Salva a imagem no disco
+        $logo = self::saveTeamImage('', $imagem);
+        if($logo){
+            $sql = "INSERT INTO times (nome, logo) VALUES (?, ?)";
+            $sql = $this->db->prepare($sql);
+            $sql->execute(array($nome, $logo));
+            return true;
+        }else{
+            return false;
+        }
+    }
 
-        $sql = "INSERT INTO times (nome, logo) VALUES (?, ?)";
-        $sql = $this->db->prepare($sql);
-        $sql->execute(array($nome));
+    public function editTeam($id, $nome, $imagem){
+        // Get team info
+        $data = self::getTeam($id);
+        if(!empty($data)){
+            // Check if will edit the image
+            if($imagem){
+                $logo = self::saveTeamImage($data['logo'], $imagem);
+                if($logo){
+                    $sql = "UPDATE times SET nome = ?, logo = ? WHERE id = ?";
+                    $sql = $this->db->prepare($sql);
+                    $sql->execute(array($nome, $logo, $id));
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                $sql = "UPDATE times SET nome = ? WHERE id = ?";
+                $sql = $this->db->prepare($sql);
+                $sql->execute(array($nome, $id));
+                return true;
+            }
+        }else{
+            return false;
+        }
     }
 
     public function saveTeamImage($oldImage, $file){
@@ -59,8 +90,15 @@ class Teams extends model{
     }
 
     public function deleteTeam($id){
-        $sql = "DELETE FROM times WHERE id = ?";
-        $sql = $this->db->prepare($sql);
-        $sql->execute(array($id));
+        // Get team info
+        $data = self::getTeam($id);
+        if(!empty($data)){
+            // Delete team image
+            self::deleteTeamImage($data['logo']);
+            // Delete team data
+            $sql = "DELETE FROM times WHERE id = ?";
+            $sql = $this->db->prepare($sql);
+            $sql->execute(array($id));
+        }
     }
 }

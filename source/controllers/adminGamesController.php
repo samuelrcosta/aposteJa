@@ -12,6 +12,11 @@ class adminGamesController extends controller{
      * This function shows the games list.
      */
     public function index(){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $g = new Games();
         $dados['jogos'] = $g->getGames();
@@ -21,6 +26,11 @@ class adminGamesController extends controller{
     }
 
     public function newGame(){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $l = new Leagues();
         $t = new Teams();
         $g = new Games();
@@ -54,6 +64,11 @@ class adminGamesController extends controller{
     }
 
     public function editGame($id){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $l = new Leagues();
         $t = new Teams();
         $g = new Games();
@@ -101,6 +116,11 @@ class adminGamesController extends controller{
     }
 
     public function insertResult($id){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $dados['title'] = 'Admin - Inserir Resultado';
         $g = new Games();
@@ -132,6 +152,11 @@ class adminGamesController extends controller{
     }
 
     public function deleteGame($id){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $g = new Games();
         if(!empty($id)){
             $g->deleteGame($id);

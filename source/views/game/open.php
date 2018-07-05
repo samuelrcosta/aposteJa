@@ -4,19 +4,19 @@
         <div class="column">
             <div class="campeonato-jogo">
                 <i class="info circle icon"></i>
-                Copa do Mundo
+                <?= $game['campeonato']; ?>
             </div>
             <div class="data-jogo">
                 <i class="calendar outline icon"></i>
-                17/06/2018
+                <?= $game['dia']; ?>
             </div>
             <div class="local-jogo">
                 <i class="map pin icon"></i>
-                Rostov, Rússia
+                <?= $game['local']; ?>
             </div>
             <div class="horario_jogo">
                 <i class="clock outline icon"></i>
-                15h
+                <?= $game['hora']; ?>
             </div>
         </div>
         <div class="column" style="display: flex; align-items: center; justify-content: center;">
@@ -25,18 +25,18 @@
                     <div class="content">
                         <div class="bandeiras">
                             <div class="time_casa">
-                                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/bandeira_brasil.PNG">
+                                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/Times/<?= $game['logo_time_casa']; ?>">
                                 <div class="nome_time">
-                                    Brasil
+                                    <?= $game['time_casa']; ?>
                                 </div>
                             </div>
                             <div class="versus">
                                 X
                             </div>
                             <div class="time_fora">
-                                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/bandeira_suica.jpg">
+                                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/Times/<?= $game['logo_time_visitante']; ?>">
                                 <div class="nome_time">
-                                    Suíça
+                                    <?= $game['time_visitante']; ?>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
         </div>
         <div class="column">
             <div class="registar-aposta">
-                <a href="<?= BASE_URL ?>bet/new/id" class="massive ui red button">
+                <a href="<?= BASE_URL ?>bet/new/<?= $game['id']; ?>" class="massive ui red button">
                     APOSTAR<br>AGORA
                 </a>
             </div>
@@ -56,7 +56,7 @@
         <div class="column">
             <div class="container-dados-aposta">
                 <button class="huge ui green button">
-                    Valor de cada aposta<br>R$ 15,00
+                    Valor de cada aposta<br>R$ <?= number_format($game['valor'], 2, ",", "."); ?>
                 </button>
             </div>
         </div>

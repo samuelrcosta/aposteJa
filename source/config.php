@@ -3,7 +3,7 @@ require 'environment.php';
 $config = array();
 if(ENVIRONMENT == 'development'){
     define("BASE_URL", 'http://localhost/php/apostasJa/source/');
-    define("SERVER_URL", "/php/apostasJa/source");
+    define("SERVER_URL", "/php/apostasJa/source/");
     $config['dbname'] = 'apostasja';
     $config['host'] = 'localhost';
     $config['dbuser'] = 'root';

@@ -16,4 +16,7 @@ $(document).ready(function(){
         $('input:text', $(e.target).parent()).val(name);
     });
 
+    $('.message .close').on('click', function() {
+        $(this).closest('.message').transition('fade');
+    });
 });

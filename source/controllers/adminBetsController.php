@@ -12,6 +12,11 @@ class adminBetsController extends controller{
      * This function shows the bets list.
      */
     public function index(){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $dados['title'] = 'Admin - Apostas';
 

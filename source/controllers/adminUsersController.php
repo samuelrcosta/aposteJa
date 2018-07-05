@@ -12,6 +12,11 @@ class adminUsersController extends controller{
      * This function shows the users list.
      */
     public function index(){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $dados['title'] = 'Admin - Usuários';
 
@@ -19,6 +24,11 @@ class adminUsersController extends controller{
     }
 
     public function editUser($id){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $dados['title'] = 'Admin - Editar Usuário';
 
@@ -27,6 +37,11 @@ class adminUsersController extends controller{
 
 
     public function deleteUser($id){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         header("Location: ".BASE_URL."adminUsers");
     }
 }

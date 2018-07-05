@@ -6,9 +6,9 @@
     <div class="placar-aposta-container">
         <div class="bandeiras">
             <div class="time">
-                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/bandeira_brasil.PNG">
+                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/Times/<?= $game['logo_time_casa']; ?>">
                 <div class="nome_time">
-                    Brasil
+                    <?= $game['time_casa']; ?>
                 </div>
             </div>
             <div class="versus">
@@ -21,9 +21,9 @@
                 </div>
             </div>
             <div class="time">
-                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/bandeira_suica.jpg">
+                <img class="ui tiny image" id="imagem_card_casa" src="<?= BASE_URL; ?>/assets/imgs/Times/<?= $game['logo_time_visitante']; ?>">
                 <div class="nome_time">
-                    Suíça
+                    <?= $game['time_visitante']; ?>
                 </div>
             </div>
         </div>
@@ -36,10 +36,10 @@
         </div>
         <div class="resultado-calculo">
             <div class="valor">
-                x R$ 15,00
+                x R$ <?= number_format($game['valor'], 2, ",", "."); ?>
             </div>
             <div class="total">
-                TOTAL: R$ <span>15,00</span>
+                TOTAL: R$ <span><?= number_format($game['valor'], 2, ",", "."); ?></span>
             </div>
         </div>
     </div>
@@ -51,12 +51,12 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#quantidade-apostas").keyup(function(){
+        $("#quantidade-apostas").change(function(){
             let qnt = $(this).val();
             if(qnt < 0){
                 $(this).val(1);
             }else{
-                let total = qnt * 15;
+                let total = qnt * <?= $game['valor']; ?>;
 
                 $(".total").find("span").html(total.toFixed(2));
             }

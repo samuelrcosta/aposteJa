@@ -6,6 +6,11 @@ class adminLeaguesController extends controller{
      * This function shows the games list.
      */
     public function index(){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $l = new Leagues();
         $dados['campeonatos'] = $l->getLeagues();
@@ -15,6 +20,11 @@ class adminLeaguesController extends controller{
     }
 
     public function newLeague(){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $dados['title'] = 'Admin - Cadastrar novo campeonato';
         $l = new Leagues();
@@ -35,6 +45,11 @@ class adminLeaguesController extends controller{
     }
 
     public function editLeague($id){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $dados = array();
         $dados['title'] = 'Admin - Editar Jogo';
         $l = new Leagues();
@@ -69,6 +84,11 @@ class adminLeaguesController extends controller{
 
 
     public function deleteLeague($id){
+        // Checks if its logged
+        if(!(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged']))) {
+            header("Location: ".BASE_URL."admin/login");
+            exit;
+        }
         $l = new Leagues();
         $g = new Games();
         if(!empty($id)){

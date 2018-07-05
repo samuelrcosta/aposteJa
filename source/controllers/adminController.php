@@ -14,10 +14,11 @@ class adminController extends controller{
     public function index($logged = false){
         $dados = array();
         $dados['title'] = 'Admin';
-        echo "TA AQUI";
-        if(!$logged){
+
+        if($logged){
             $_SESSION['admin_logged'] = true;
             header("Location: ".BASE_URL."adminGames");
+            exit;
         }else{
             header("Location: ".BASE_URL."admin/login");
         }
@@ -27,6 +28,11 @@ class adminController extends controller{
      * This function shows the login page.
      */
     public function login(){
+        // Checks if its logged
+        if(isset($_SESSION['admin_logged']) && !empty($_SESSION['admin_logged'])) {
+            header("Location: ".BASE_URL."adminGames");
+            exit;
+        }
         $dados = array();
         $dados['title'] = 'Admin - Login';
 
@@ -34,7 +40,7 @@ class adminController extends controller{
     }
 
     public function logoff(){
-        $_SESSION['logged'] = null;
+        $_SESSION['admin_logged'] = null;
 
         header("Location: ".BASE_URL);
         exit;
