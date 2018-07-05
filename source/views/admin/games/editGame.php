@@ -4,69 +4,53 @@
     <form class="ui form">
         <h4 class="ui dividing header">Data do Jogo</h4>
         <div class="fields">
-            <div class="three wide field">
-                <label>Dia</label>
-                <input type="text" name="diaInput" maxlength="2" placeholder="" value="17">
-            </div>
             <div class="six wide field">
-                <label>Mês</label>
-                <div class="two fields">
-                    <div class="field">
-                        <select class="ui fluid search dropdown" name="mesInput">
-                            <option value="01">Janeiro</option>
-                            <option value="02">Fevereiro</option>
-                            <option value="03">Março</option>
-                            <option value="04">Abril</option>
-                            <option value="05">Maio</option>
-                            <option value="06" selected>Junho</option>
-                            <option value="07">Julho</option>
-                            <option value="08">Agosto</option>
-                            <option value="09">Setembro</option>
-                            <option value="10">Outubro</option>
-                            <option value="11">Novembro</option>
-                            <option value="12">Dezembro</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <input type="text" name="anoInput" maxlength="4" placeholder="Ano" value="2018">
-                    </div>
-                </div>
+                <input type="text" required name="data" id="data"  placeholder="dd/mm/yyyy hh:mm" value="<?= $game['data'] ?>">
             </div>
         </div>
         <div class="field">
             <label>Campeonato</label>
             <div class="field">
-                <select class="ui fluid search dropdown" name="campeonatoInput">
-                    <option value="01"selected>Copa do Mundo</option>
-                    <option value="02">Campeonato Brasileiro</option>
-                    <option value="03">Champions League</option>
-                    <option value="04">Copa do Brasil</option>
+                <select class="ui fluid search dropdown" required name="campeonato" id="campeonato">
+                    <?php foreach ($leagues as $l):?>
+                         <option value="<?= $l['id'] ?>"><?= $l['nome'] ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
         </div>
         <div class="two fields">
             <div class="field">
                 <label>Time da Casa</label>
-                <input type="text" name="time_casa" placeholder="Time da Casa" value="Brasil">
+                <select class="ui fluid search dropdown" required name="time_casa" id="time_casa">
+                    <?php foreach ($times as $t):?>
+                         <option <?= ($game['id_time_casa'] == $t['id'])? 'selected' : '' ?> value="<?= $t['id'] ?>"><?= $t['nome'] ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
             <div class="field">
                 <label>Time Visitante</label>
-                <input type="text" name="time_visitante" placeholder="Time Visitante" value="Suíça">
+                <select class="ui fluid search dropdown" required name="time_visitante" id="time_visitante">
+                    <?php foreach ($times as $t):?>
+                         <option <?= ($game['id_time_visitante'] == $t['id'])? 'selected' : '' ?> value="<?= $t['id'] ?>"><?= $t['nome'] ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
         </div>
         <div class="field">
             <label>Local</label>
-            <input type="text" name="local" placeholder="Local do jogo..." value="Rostov, Rússia">
+            <input type="text" name="local" placeholder="Local do jogo..." value="<?= $game['local'] ?>">
         </div>
-        <div class="two fields">
-            <div class="field">
-                <label>Horário</label>
-                <input type="text" name="horario" placeholder="Horário" value="15h">
-            </div>
+        <div class="fields">
             <div class="field">
                 <label>Valor</label>
-                <input type="text" name="time_visitante" placeholder="Valor" value="15,00">
+                <input type="text" required name="valor" id="valor" placeholder="Valor" value="<?= number_format($game['valor'], 2, ",", "."); ?>">
             </div>
         </div>
         <a href="<?= BASE_URL ?>adminGames" class="ui fluid large green button" style="margin-top: 20px" tabindex="1">Salvar</a>
     </form>
+    <script>
+        $(document).ready(function(){
+          $("#data").mask('00/00/0000 00:00');
+          $('#valor').mask("#.##0,00", {reverse: true});
+         });
+    </script>

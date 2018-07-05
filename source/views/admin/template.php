@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="<?= BASE_URL; ?>assets/js/semantic.min.js"></script>
+    <script src="<?= BASE_URL; ?>assets/js/jquery.mask.min.js"></script>
 </head>
 
 <body>

@@ -10,7 +10,7 @@ class Games extends model{
 
     public function getGames(){
         $array = array();
-        $sql = "SELECT id, status, data, id_campeonato, (SELECT nome FROM campeonatos WHERE id = jogos.id_campeonato) as campeonato, 
+        $sql = "SELECT id, status, DATE_FORMAT(data, '%d/%m/%Y') as data, DATE_FORMAT(data, '%H:%i') as horario, id_campeonato, (SELECT nome FROM campeonatos WHERE id = jogos.id_campeonato) as campeonato, 
 id_time_casa, (SELECT nome FROM times WHERE id = jogos.id_time_casa) as time_casa, 
 id_time_visitante, (SELECT nome FROM times WHERE id = jogos.id_time_visitante) as time_visitante, local, valor, resultado_casa, resultado_visitante, popular FROM jogos";
         $sql = $this->db->prepare($sql);
@@ -25,10 +25,22 @@ id_time_visitante, (SELECT nome FROM times WHERE id = jogos.id_time_visitante) a
 
     public function getGame($id){
         $array = array();
-        $sql = "SELECT * FROM games WHERE id = ?";
+        $sql = "SELECT id, status, DATE_FORMAT(data, '%d/%m/%Y %H:%i') as data, id_campeonato, id_time_casa, id_time_visitante, local, valor, resultado_casa, resultado_visitante, popular FROM jogos WHERE id = ?";
         $sql = $this->db->prepare($sql);
         $sql->execute(array($id));
         $sql = $sql->fetch();
+        if($sql && count($sql)){
+            $array = $sql;
+        }
+        return $array;
+    }
+
+    public function getGamesByLeague($league){
+        $array = array();
+        $sql = "SELECT * FROM jogos WHERE id_campeonato = ?";
+        $sql = $this->db->prepare($sql);
+        $sql->execute(array($league));
+        $sql = $sql->fetchAll();
         if($sql && count($sql)){
             $array = $sql;
         }

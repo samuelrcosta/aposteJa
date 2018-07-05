@@ -33,9 +33,9 @@
                 <td><?= $jogo['time_casa']; ?></td>
                 <td><?= $jogo['time_visitante']; ?></td>
                 <td class="single line"><?= $jogo['local']; ?></td>
-                <td></td>
-                <td>R$ <?= $jogo['valor']; ?></td>
-                <td><span class="yellow"><?= $jogo['status']; ?></span></td>
+                <td><?= $jogo['horario']; ?></td>
+                <td class="single line">R$ <?= number_format($jogo['valor'], 2, ",", "."); ?></td>
+                <td><span class="<?= ($jogo['status'] == 'sem_resultado')? 'yellow' : 'green' ?>"><?= ($jogo['status'] == 'sem_resultado')? 'Aguardando Resultado' : 'Concluído' ?></span></td>
                 <td class="single line">
                     <a href="<?= BASE_URL ?>adminGames/deleteGame/<?= $jogo['id']; ?>" class="ui icon red button" data-tooltip="Excluir Jogo" data-position="bottom left" data-inverted=""><i class="trash icon"></i></a>
                     <a href="<?= BASE_URL ?>adminGames/editGame/<?= $jogo['id']; ?>" class="ui icon orange button" data-tooltip="Editar Jogo" data-position="bottom left" data-inverted=""><i class="edit icon"></i></a>

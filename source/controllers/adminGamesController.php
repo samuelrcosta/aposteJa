@@ -28,10 +28,27 @@ class adminGamesController extends controller{
     }
 
     public function editGame($id){
+        $l = new Leagues();
+        $t = new Teams();
+        $g = new Games();
         $dados = array();
         $dados['title'] = 'Admin - Editar Jogo';
+        $dados['leagues'] = $l->getLeagues();
+        $dados['times'] = $t->getTeams();
 
-        $this->loadAdminTemplate('admin/games/editGame', $dados);
+         if(!empty($id)){
+            $game = $g->getGame(addslashes($id));
+            if(!empty($game)){
+                $dados['game'] = $game;
+                $this->loadAdminTemplate('admin/games/editGame', $dados);
+            }else{
+                header("Location: ".BASE_URL."adminGames");
+                exit;
+            }
+        }else{
+           header("Location: ".BASE_URL."adminGames");
+            exit;
+        }
     }
 
     public function insertResult($id){
